@@ -1,0 +1,23 @@
+{
+    "name": "employee-management-app",
+    "version": "1.0.0",
+    "description": "View and manage the departments, roles, and employees in your company",
+    "main": "app.js",
+    "scripts": {
+      "start": "node app.js"
+    },
+    "keywords": [
+      "employee",
+      "management",
+      "inquirer",
+      "mysql2",
+      "node.js"
+    ],
+    "author": "CH3RNAND3Z",
+    "license": "MIT",
+    "dependencies": {
+      "inquirer": "^8.2.4",
+      "mysql2": "^2.3.0"
+    }
+  }
+  
