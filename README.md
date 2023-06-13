@@ -16,11 +16,13 @@ Employee Tracker CMS designed to allow the user to easily view and edit their em
 
 ## Installation
 
-Ensure installation of all necessary dependencies and packages by running npm i command in the terminal.
+Ensure installation of all necessary dependencies and packages by running "npm i" command in the terminal.
 
 ## Usage
 
-Once installation is complete upon running the command node app.js in the command line the app will start up and using your keyboard the user can cycle through all the options.
+Once installation is complete upon running the command "node app.js" in the command line the app will start up and using your keyboard the user can cycle through all the options. As demonstarted in the walkthrough video below the user can view all employees, roles, and departments. The user can also add new employees, roles, and departments. The user can also update an employees role. The user can also delete an employee, role, or department. As a precaution the functions are set up so that the user cannot accidentally delete a department without deleting the roles first and cannot delete a role without deleting the employees first. The user can also exit the application at any time by selecting the exit option.
+
+Walkthrough video: https://drive.google.com/file/d/1Xnp3ar9AO0IaLl4Yc4azILrM7dNULfYj/view
 
 ## License
 
