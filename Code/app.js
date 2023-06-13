@@ -275,7 +275,7 @@ async function updateEmployeeRole() {
   }
 }
 
-// Function to delete a department
+// Function to delete a department (All roles must be deleted first)
 async function deleteDepartment() {
   try {
     const departments = await query('SELECT * FROM departments');
@@ -297,7 +297,7 @@ async function deleteDepartment() {
   }
 }
 
-// Function to delete a role
+// Function to delete a role (All employees must be deleted first)
 async function deleteRole() {
   try {
     const roles = await query('SELECT * FROM roles');
