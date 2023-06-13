@@ -65,6 +65,9 @@ async function startApp() {
       case 'Update an employee role':
         await updateEmployeeRole();
         break;
+      case 'Delete a department':
+        await deleteDepartment();
+        break;
       case 'Exit':
         connection.end();
         console.log('Goodbye!');
