@@ -12,7 +12,6 @@ Employee Tracker CMS designed to allow the user to easily view and edit their em
 - [Usage](#usage)
 - [License](#license)
 - [Contributing](#contributing)
-- [Tests](#tests)
 - [Questions](#questions)
 
 ## Installation
