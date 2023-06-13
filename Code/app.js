@@ -262,3 +262,25 @@ async function updateEmployeeRole() {
     console.error('Error updating employee role: ', err);
   }
 }
+
+// Function to delete a department
+async function deleteDepartment() {
+  try {
+    const departments = await query('SELECT * FROM departments');
+    const answer = await inquirer.prompt({
+      name: 'departmentId',
+      type: 'list',
+      message: 'Select the department to delete:',
+      choices: departments.map((department) => ({
+        name: department.department_name,
+        value: department.department_id,
+      })),
+    });
+
+    await query('DELETE FROM departments WHERE department_id = ?', answer.departmentId);
+    console.log('Department deleted successfully!');
+    await startApp();
+  } catch (err) {
+    console.error('Error deleting department: ', err);
+  }
+}
