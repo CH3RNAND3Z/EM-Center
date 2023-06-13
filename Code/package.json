@@ -17,7 +17,9 @@
     "license": "MIT",
     "dependencies": {
       "inquirer": "^8.2.4",
-      "mysql2": "^2.3.0"
+      "mysql2": "^2.3.0",
+      "console.table": "^0.10.0",
+      "dotenv": "^10.0.0"
     }
   }
   

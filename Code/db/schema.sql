@@ -1,15 +1,12 @@
 -- Create the database
 CREATE DATABASE employee_db;
-
 -- Use the database
 USE employee_db;
-
 -- Create the departments table
 CREATE TABLE departments (
   department_id INT AUTO_INCREMENT PRIMARY KEY,
   department_name VARCHAR(255)
 );
-
 -- Create the roles table
 CREATE TABLE roles (
   role_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -18,7 +15,6 @@ CREATE TABLE roles (
   department_id INT,
   FOREIGN KEY (department_id) REFERENCES departments(department_id)
 );
-
 -- Create the employees table
 CREATE TABLE employees (
   employee_id INT AUTO_INCREMENT PRIMARY KEY,
