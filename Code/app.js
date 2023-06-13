@@ -68,6 +68,9 @@ async function startApp() {
       case 'Delete a department':
         await deleteDepartment();
         break;
+      case 'Delete a role':
+        await deleteRole();
+        break;
       case 'Exit':
         connection.end();
         console.log('Goodbye!');
@@ -285,5 +288,27 @@ async function deleteDepartment() {
     await startApp();
   } catch (err) {
     console.error('Error deleting department: ', err);
+  }
+}
+
+// Function to delete a role
+async function deleteRole() {
+  try {
+    const roles = await query('SELECT * FROM roles');
+    const answer = await inquirer.prompt({
+      name: 'roleId',
+      type: 'list',
+      message: 'Select the role to delete:',
+      choices: roles.map((role) => ({
+        name: role.role_title,
+        value: role.role_id,
+      })),
+    });
+
+    await query('DELETE FROM roles WHERE role_id = ?', answer.roleId);
+    console.log('Role deleted successfully!');
+    await startApp();
+  } catch (err) {
+    console.error('Error deleting role: ', err);
   }
 }
