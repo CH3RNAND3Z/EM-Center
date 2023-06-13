@@ -312,3 +312,25 @@ async function deleteRole() {
     console.error('Error deleting role: ', err);
   }
 }
+
+// Function to delete an employee
+async function deleteEmployee() {
+  try {
+    const employees = await query('SELECT * FROM employees');
+    const answer = await inquirer.prompt({
+      name: 'employeeId',
+      type: 'list',
+      message: 'Select the employee to delete:',
+      choices: employees.map((employee) => ({
+        name: `${employee.first_name} ${employee.last_name}`,
+        value: employee.employee_id,
+      })),
+    });
+
+    await query('DELETE FROM employees WHERE employee_id = ?', answer.employeeId);
+    console.log('Employee deleted successfully!');
+    await startApp();
+  } catch (err) {
+    console.error('Error deleting employee: ', err);
+  }
+}
